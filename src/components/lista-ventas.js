@@ -3,8 +3,8 @@ import "./lista-ventas.css"
 
 const ListaVentas = () => {
     return (
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover">
+        <div className="table-responsive">
+            <table className="table table-bordered table-hover">
             <thead>
                 <tr>
                 <th scope="col">#</th>
@@ -15,7 +15,7 @@ const ListaVentas = () => {
             </thead>
             <tbody>
                 {ItemsVendidos.map((item, index) => (
-                <tr>
+                <tr key={index}>
                     <th scope="row">{index}</th>
                     <td>{item.fecha}</td>
                     <td>{item.id}</td>
@@ -25,7 +25,7 @@ const ListaVentas = () => {
             </tbody>
             <tfoot>
                 <tr>
-                    <th className="Total" colspan="3">Total :</th>
+                    <th className="Total">Total :</th>
                     <td>
                         {ItemsVendidos.reduce((accumulator, object) => {return accumulator + object.valor;}, 0)}
                     </td>

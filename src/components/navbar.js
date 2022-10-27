@@ -3,7 +3,7 @@ const NavBar = () => {
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark rounded mb-3 w-75 mx-auto px-2">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/">
-                    <img src="/logo.png" class="img-fluid" width={80} alt="logo"/>
+                    <img src="/logo.png" className="img-fluid me-2" width={40} alt="logo"/>
                     Supermercados Fruver
                 </a>
                 <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
