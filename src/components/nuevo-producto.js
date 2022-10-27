@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ListaProductos from "../components/lista-productos";
+import ListaProductos from "./lista-productos";
 
 const NuevoProducto = () => {
     
