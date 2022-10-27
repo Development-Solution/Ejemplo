@@ -6,10 +6,10 @@ import Root from './routes/root';
 import ErrorPage from './error-page';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-import NuevoProducto from './routes/nuevo-producto';
+import NuevoProducto from './components/nuevo-producto';
 import ListaProductos from './components/lista-productos';
-import ListaVentas from './routes/lista-ventas'
-import NavBar from "./navbar"
+import ListaVentas from './components/lista-ventas'
+import NavBar from "./components/navbar"
 
 const router = createBrowserRouter([
   {path: '/', element: <Root />, errorElement: <ErrorPage />},
