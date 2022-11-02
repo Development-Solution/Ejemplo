@@ -6,9 +6,9 @@ import UserContext from "./user-context";
 import { ItemsInventario } from "./lista-items";
 
 let id = 0
-const ListaProductos = () => {
+const ListaProductosCliente = () => {
     
-    const [UserType, setUserType] = useState('administrador');
+    const [UserType, setUserType] = useState('cliente');
     const value = {UserType, setUserType};
 
     return (
@@ -45,4 +45,4 @@ const ListaProductos = () => {
     );
 }
 
-export default ListaProductos
+export default ListaProductosCliente

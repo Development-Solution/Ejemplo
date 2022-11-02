@@ -1,8 +1,18 @@
-import { ItemsVendidos } from "./lista-items_vendidos"
-import "./lista-ventas.css"
+import React, { useState } from 'react';
+import { ItemsVendidos } from "./lista-items_vendidos";
+import "./estilos.css";
+
+import NavBar from './navbar';
+import UserContext from "./user-context";
 
 const ListaVentas = () => {
+
+    const [UserType, setUserType] = useState('administrador');
+    const value = {UserType, setUserType};
+
     return (
+        <UserContext.Provider value={value}>
+        <NavBar></NavBar>
         <div className="table-responsive">
             <table className="table table-bordered table-hover">
             <thead>
@@ -33,6 +43,7 @@ const ListaVentas = () => {
             </tfoot>
             </table>
         </div>
+        </UserContext.Provider>
     )
 };
 

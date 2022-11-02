@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import ListaProductos from "./lista-productos";
+import NavBar from './navbar';
+import UserContext from "./user-context";
 
 const NuevoProducto = () => {
     
@@ -17,8 +18,13 @@ const NuevoProducto = () => {
         setProductos(productos => [...productos, productoNuevo])        
     }
 
+    const [UserType, setUserType] = useState('administrador');
+    const value = {UserType, setUserType}
+
     return (
         <>
+            <UserContext.Provider value={value}>
+            <NavBar></NavBar>
             <div id="producto">
                 <div className="container mt-3 w-75">
                     <h1 className='text-primary'>
@@ -55,11 +61,8 @@ const NuevoProducto = () => {
                         </form>
                     </div>
                 </div>
-                <div>  
-                    <ListaProductos productos={productos} />
-                </div>
             </div>
-
+            </UserContext.Provider>
         </>
     );
 }
