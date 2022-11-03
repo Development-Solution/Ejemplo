@@ -57,7 +57,9 @@ const NuevoProducto = () => {
                                     placeholder="Digite su nombre..." required></input>
                                 <label htmlFor="stock" className="text-muted">Stock</label>
                             </div>
-                            <button className="btn btn-success mt-3 text-capitalize">Agregar producto</button>
+                            <button className="btn btn-success mt-3 text-capitalize" onClick={() => {
+                                alert("Su producto ha sido cargado!")
+                                }}>Agregar producto</button>
                         </form>
                     </div>
                 </div>
