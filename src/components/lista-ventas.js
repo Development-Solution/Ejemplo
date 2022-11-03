@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ItemsVendidos } from "./lista-items_vendidos";
-import "./estilos.css";
+import ItemsVendidos from "./../data/lista-items_vendidos.json";
+import "./../styles/estilos.css";
 
 import NavBar from './navbar';
 import UserContext from "./user-context";

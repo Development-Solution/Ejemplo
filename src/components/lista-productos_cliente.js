@@ -1,9 +1,9 @@
-import './estilos.css'
+import './../styles/estilos.css'
 import React, { useState } from 'react';
 import NavBar from './navbar';
 import UserContext from "./user-context";
 
-import { ItemsInventario } from "./lista-items";
+import ItemsInventario from "./../data/lista-items.json";
 
 let id = 0
 const ListaProductosCliente = () => {

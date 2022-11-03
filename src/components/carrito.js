@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ItemsSeleccionados } from "./lista-items_seleccionados";
-import "./estilos.css";
+import ItemsSeleccionados from "./../data/lista-items_seleccionados.json";
+import "./../styles/estilos.css";
 
 import NavBar from './navbar';
 import UserContext from "./user-context";

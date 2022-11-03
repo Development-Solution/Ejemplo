@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./estilos.css"
+import "./../styles/estilos.css"
 
 import UserContext from "./user-context";
 import { SwitchToAdmin,  SwitchToClient } from "./switch-button";
