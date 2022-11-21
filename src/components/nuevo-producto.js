@@ -1,25 +1,30 @@
 import React, { useState } from 'react';
 import NavBar from './navbar';
 import UserContext from "./user-context";
+const { Requests } = require('./../react-utils.js');
 
 const NuevoProducto = () => {
     
-    const [productos, setProductos] = useState([]);
+    const [productos, setProductos] = useState();
 
     const agregarProducto = (e) => {
-        e.preventDefault()
-        const productoNuevo = {}
-        const formulario = document.querySelector('#crearProductoForm')
-        productoNuevo.nombre = formulario[0].value
-        productoNuevo.descripcion = formulario[1].value
-        productoNuevo.img = formulario[2].value
-        productoNuevo.price = formulario[3].value
-        productoNuevo.stock = formulario[4].value
-        setProductos(productos => [...productos, productoNuevo])        
+        e.preventDefault();
+        const productoNuevo = {};
+        const formulario = document.querySelector('#crearProductoForm');
+        productoNuevo.nombre = formulario[0].value;
+        productoNuevo.descripcion = formulario[1].value;
+        productoNuevo.img = formulario[2].value;
+        productoNuevo.price = formulario[3].value;
+        productoNuevo.stock = formulario[4].value;
+        setProductos(productoNuevo);
+
+        const request = new Requests();
+        const a = request.post('agregar-producto', productos);
+        console.log(a)
     }
 
     const [UserType, setUserType] = useState('administrador');
-    const value = {UserType, setUserType}
+    const value = {UserType, setUserType};
 
     return (
         <>
@@ -43,7 +48,7 @@ const NuevoProducto = () => {
                                 <label htmlFor="descripcion" className="text-muted">Descripción</label>
                             </div>
                             <div className='form-floating mb-3'>
-                                <input type="url" id='urlImange' className='form-control text-secondary font-weight-bold' name='urlImange'
+                                <input type="text" id='urlImange' className='form-control text-secondary font-weight-bold' name='urlImange'
                                     placeholder="Digite su nombre..." required></input>
                                 <label htmlFor="urlImange" className="text-muted">Url imagen</label>
                             </div>
