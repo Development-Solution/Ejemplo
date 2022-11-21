@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "d86505a0-8c8b-4284-b742-9e1a4caf2375",
+		"name": "supermercados_fruver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11575373"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3001/adm-mostrar-productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/adm-mostrar-productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"adm-mostrar-productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/agregar-producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"img\": \"/prueba\",\r\n        \"nombre\": \"nombre_prueba\",\r\n        \"descripcion\": \"Esta es una descripción de prueba\",\r\n        \"price\": 161616,\r\n        \"stock\": 2222\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/agregar-producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"agregar-producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/modificar-producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"img\": \"/prueba\",\r\n        \"nombre\": \"nombre_prueba\",\r\n        \"descripcion\": \"Esta es una descripción de prueba modificada\",\r\n        \"price\": 28000,\r\n        \"stock\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/modificar-producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"modificar-producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/agregar-unidades",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"prueba\",\r\n        \"agregar\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/agregar-unidades",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"agregar-unidades"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/usr-mostrar-productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/usr-mostrar-productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"usr-mostrar-productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/seleccionar-carrito",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"nombre\": \"Cereal Chocapic\",\r\n        \"stock\": 2\r\n    },\r\n    {\r\n        \"nombre\": \"mecato doritos\",\r\n        \"stock\": 20\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/seleccionar-carrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"seleccionar-carrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/finalizar-compra",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"img\": \"chocapic.webp\",\r\n        \"nombre\": \"Cereal Chocapic\",\r\n        \"descripcion\": \"Granos de cereal con sabor a chocolate\",\r\n        \"price\": 25000,\r\n        \"stock\": 2\r\n    },\r\n    {\r\n        \"img\": \"doritos.webp\",\r\n        \"nombre\": \"Mecato Doritos\",\r\n        \"descripcion\": \"Mecato\",\r\n        \"price\": 3000,\r\n        \"stock\": 12\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/finalizar-compra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"finalizar-compra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3001/pagar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"img\": \"chocapic.webp\",\r\n        \"nombre\": \"Cereal Chocapic\",\r\n        \"descripcion\": \"Granos de cereal con sabor a chocolate\",\r\n        \"price\": 25000,\r\n        \"stock\": 2\r\n    },\r\n    {\r\n        \"img\": \"doritos.webp\",\r\n        \"nombre\": \"Mecato Doritos\",\r\n        \"descripcion\": \"Mecato\",\r\n        \"price\": 3000,\r\n        \"stock\": 12\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/pagar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"pagar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
